@@ -8,34 +8,34 @@ class TerminalPortfolio {
         // Portfolio data
         this.portfolioData = {
             name: "Sukrit",
-            title: "AI Engineer",
-            bio: "Passionate AI Engineer with 5+ years of experience in machine learning, deep learning, and intelligent systems. I specialize in building scalable AI solutions that solve real-world problems.",
+            title: "AI/ML Engineer",
+            bio: "An explorer who loves to push the boundaries of AI and machine learning. With a passion for innovation, I specialize in building intelligent systems that learn and adapt. My journey is driven by curiosity and a commitment to making technology accessible and impactful.",
             
             tools: {
-                "Programming Languages": ["Python", "JavaScript", "R", "SQL", "C++", "Java"],
-                "AI/ML Frameworks": ["TensorFlow", "PyTorch", "Scikit-learn", "Keras", "OpenAI API", "Hugging Face"],
-                "Cloud & Tools": ["AWS", "Docker", "Git", "Jupyter", "MongoDB", "PostgreSQL", "Kubernetes"],
+                "Programming Languages": ["Python", "JavaScript", "C", "SQL", "C++"],
+                "AI/ML Frameworks": ["TensorFlow", "PyTorch", "Scikit-learn", "Keras", "OpenAI API"],
+                "Cloud & Tools": ["AWS", "Docker", "Git", "Jupyter", "MongoDB", "PostgreSQL", "SQLite", "Kubernetes"],
                 "Specializations": ["Natural Language Processing", "Computer Vision", "Deep Learning", "MLOps"]
             },
             
             experience: [
                 {
-                    title: "Senior AI Engineer",
-                    company: "TechCorp Industries",
-                    duration: "2022 - Present",
-                    description: "Leading AI initiatives and developing cutting-edge ML solutions for enterprise clients."
+                    title: "Tech Associate",
+                    community: "SC CSE AOT",
+                    duration: "2023 - Present",
+                    description: "Leading AI initiatives and navigating the team through complex technical challenges. Mentoring peers in AI/ML technologies and fostering a culture of innovation."
                 },
                 {
-                    title: "Machine Learning Engineer",
-                    company: "DataFlow Systems",
-                    duration: "2020 - 2022",
-                    description: "Built and deployed ML pipelines for large-scale data processing and real-time analytics."
+                    title: "Design Lead",
+                    community: "MLSA Nexus",
+                    duration: "2024 - Present",
+                    description: "Designed community projects. Leading the team in creating impactful solutions and enhancing user experience through design thinking."
                 },
                 {
-                    title: "M.S. Computer Science (AI)",
-                    company: "Stanford University",
-                    duration: "2018 - 2020",
-                    description: "Specialized in Artificial Intelligence with focus on deep learning and neural networks."
+                    title: "Designer",
+                    community: "GDG on campus AOT",
+                    duration: "2024 - Present",
+                    description: "Designed posts and website for the community. Collaborating with developers to create visually appealing and user-friendly interfaces."
                 }
             ],
             
@@ -67,9 +67,9 @@ class TerminalPortfolio {
             ],
             
             contact: {
-                email: "sukrit@example.com",
-                github: "https://github.com/sukrit",
-                linkedin: "https://linkedin.com/in/sukrit-ai",
+                email: "debsukrit00@gmail.com",
+                github: "https://github.com/SukritDeb",
+                linkedin: "https://www.linkedin.com/in/sukritdeb/",
                 website: "https://sukrit.dev"
             }
         };
@@ -297,7 +297,7 @@ Type any command to get started!`;
         this.portfolioData.experience.forEach((exp, index) => {
             this.addOutput('', 'output');
             this.addOutput(`${index + 1}. ${exp.title}`, 'experience-title');
-            this.addOutput(`   Company: ${exp.company}`, 'experience-company');
+            this.addOutput(`   Community: ${exp.community}`, 'experience-community');
             this.addOutput(`   Duration: ${exp.duration}`, 'experience-duration');
             this.addOutput(`   ${exp.description}`, 'experience-description');
         });
