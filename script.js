@@ -241,27 +241,25 @@ class TerminalPortfolio {
     showHelp() {
         const helpText = `
 Available commands:\n
+  help:       Show this help message \n
+  about:      Display information about me \n
+  tools:      List my technical skills and tools \n
+  experience: Show my work and educational experience \n
+  projects:   Display my featured projects \n
+  contact:    Show my contact information\n
+  clear:      Clear the terminal screen\n
+  whoami:     Display current user\n
+  date:       Show current date and time\n
+  ls:         List available commands\n
+  pwd:        Show current directory\n
 
-  help        Show this help message \n
-  about       Display information about me \n
-  tools       List my technical skills and tools \n
-  experience  Show my work and educational experience \n
-  projects    Display my featured projects \n
-  contact     Show my contact information\n
-  clear       Clear the terminal screen\n
-  whoami      Display current user\n
-  date        Show current date and time\n
-  ls          List available commands\n
-  pwd         Show current directory\n
-  
 Navigation:\n
-  ↑/↓         Navigate command history\n
-  Tab         Auto-complete commands\n
-  Ctrl+C      Cancel current command\n
-
+  ↑/↓:        Navigate command history\n
+  Tab:        Auto-complete commands\n
+  Ctrl+C:     Cancel current command\n
+  
 Type any command to get started!`;
-        
-        this.addOutput(helpText, 'success');
+        this.addOutput(helpText.replace(/\n/g, '<br>'), 'success');
     }
     
     showAbout() {
@@ -500,11 +498,11 @@ Type any command to get started!`;
 document.addEventListener('DOMContentLoaded', () => {
     new TerminalPortfolio();
 });
-
+//for debugging enable the inspect
 // Prevent context menu on right click for more authentic terminal feel
-document.addEventListener('contextmenu', (e) => {
+/*document.addEventListener('contextmenu', (e) => {
     e.preventDefault();
-});
+});*/
 
 // Handle window focus to keep input focused
 window.addEventListener('focus', () => {

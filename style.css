@@ -113,12 +113,14 @@ body {
     white-space: pre-wrap;
 }
 
+
 .error {
     color: #ff4444;
 }
 
 .success {
     color: #00ff00;
+    line-height: 0.6;
 }
 
 .info {
@@ -168,10 +170,13 @@ body {
 
 /* Command Output Styles */
 .ascii-art {
-    color: #00ff00;
+   
     font-size: 12px;
     line-height: 1.2;
     margin: 10px 0;
+    white-space: pre;
+    font-family: monospace;
+    color: #00ff00; /* Optional styling */
 }
 
 .section-header {
