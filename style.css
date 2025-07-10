@@ -1,0 +1,415 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    background: #000;
+    color: #00ff00;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Terminal Container */
+.terminal-container {
+    width: 100%;
+    max-width: 1000px;
+    height: 90vh;
+    background: #000;
+    border: 2px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 0 50px rgba(0, 255, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Terminal Header */
+.terminal-header {
+    background: #1a1a1a;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+}
+
+.terminal-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.control.close {
+    background: #ff5f56;
+}
+
+.control.minimize {
+    background: #ffbd2e;
+}
+
+.control.maximize {
+    background: #27ca3f;
+}
+
+.terminal-title {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Terminal Body */
+.terminal-body {
+    flex: 1;
+    background: #000;
+    padding: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.terminal-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Terminal Lines */
+.terminal-line {
+    margin-bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    word-break: break-word;
+    line-height: 1.4;
+}
+
+.prompt {
+    color: #00ff00;
+    font-weight: 700;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.command {
+    color: #fff;
+    font-weight: 500;
+}
+
+.output {
+    color: #00ff00;
+    margin-left: 0;
+    white-space: pre-wrap;
+}
+
+.error {
+    color: #ff4444;
+}
+
+.success {
+    color: #00ff00;
+}
+
+.info {
+    color: #44aaff;
+}
+
+.warning {
+    color: #ffaa00;
+}
+
+/* Current Input Line */
+.current-line {
+    margin-top: auto;
+    position: relative;
+}
+
+.input-container {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.command-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-family: inherit;
+    font-size: inherit;
+    width: 100%;
+    caret-color: transparent;
+}
+
+.cursor {
+    color: #00ff00;
+    animation: blink 1s infinite;
+    position: absolute;
+    pointer-events: none;
+}
+
+/* Cursor Animation */
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* Command Output Styles */
+.ascii-art {
+    color: #00ff00;
+    font-size: 12px;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+.section-header {
+    color: #00ff00;
+    font-weight: 700;
+    text-decoration: underline;
+    margin: 15px 0 10px 0;
+}
+
+.project-item {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.project-title {
+    color: #44aaff;
+    font-weight: 700;
+}
+
+.project-description {
+    color: #ccc;
+    margin: 5px 0;
+}
+
+.project-tech {
+    color: #888;
+    font-style: italic;
+}
+
+.project-link {
+    color: #00ff00;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.project-link:hover {
+    color: #44ff44;
+}
+
+.contact-item {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-label {
+    color: #00ff00;
+    font-weight: 700;
+    width: 100px;
+    flex-shrink: 0;
+}
+
+.contact-value {
+    color: #fff;
+}
+
+.contact-link {
+    color: #44aaff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.contact-link:hover {
+    color: #66ccff;
+}
+
+.skill-category {
+    margin: 10px 0;
+}
+
+.skill-category-title {
+    color: #00ff00;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.skill-list {
+    color: #ccc;
+    margin-left: 20px;
+}
+
+.experience-item {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.experience-title {
+    color: #44aaff;
+    font-weight: 700;
+}
+
+.experience-company {
+    color: #00ff00;
+    font-weight: 500;
+}
+
+.experience-duration {
+    color: #888;
+    font-style: italic;
+}
+
+.experience-description {
+    color: #ccc;
+    margin: 5px 0;
+}
+
+/* Loading Animation */
+.loading {
+    color: #00ff00;
+}
+
+.loading::after {
+    content: '';
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { content: ''; }
+    25% { content: '.'; }
+    50% { content: '..'; }
+    75% { content: '...'; }
+    100% { content: ''; }
+}
+
+/* Scrollbar Styling */
+.terminal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+    background: #111;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .terminal-container {
+        height: 95vh;
+        border-radius: 4px;
+    }
+    
+    .terminal-body {
+        padding: 15px;
+    }
+    
+    .terminal-title {
+        font-size: 12px;
+    }
+    
+    .ascii-art {
+        font-size: 10px;
+    }
+    
+    .contact-label {
+        width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .terminal-body {
+        padding: 10px;
+    }
+    
+    .terminal-line {
+        font-size: 14px;
+    }
+    
+    .prompt {
+        margin-right: 4px;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .contact-label {
+        width: auto;
+        margin-bottom: 2px;
+    }
+}
+
+/* Selection Styling */
+::selection {
+    background: rgba(0, 255, 0, 0.3);
+    color: #fff;
+}
+
+::-moz-selection {
+    background: rgba(0, 255, 0, 0.3);
+    color: #fff;
+}
+
+/* Focus Styles */
+.command-input:focus {
+    outline: none;
+}
+
+/* Animation for new lines */
+.terminal-line.new {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Typing effect */
+.typing {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(40, end);
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
