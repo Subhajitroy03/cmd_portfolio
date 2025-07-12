@@ -83,11 +83,8 @@ class TerminalPortfolio {
             contact: this.showContact.bind(this),
             clear: this.clearTerminal.bind(this),
             whoami: this.whoAmI.bind(this),
-            date: this.showDate.bind(this),
             ls: this.listCommands.bind(this),
-            pwd: this.showPath.bind(this),
-            cat: this.catCommand.bind(this),
-            echo: this.echoCommand.bind(this)
+            resume: this.showResume.bind(this),
         };
         
         this.init();
@@ -249,9 +246,8 @@ Available commands:\n
   contact:    Show my contact information\n
   clear:      Clear the terminal screen\n
   whoami:     Display current user\n
-  date:       Show current date and time\n
   ls:         List available commands\n
-  pwd:        Show current directory\n
+  resume:        Downloads my resume\n
 
 Navigation:\n
   ↑/↓:        Navigate command history\n
@@ -340,41 +336,27 @@ Type any command to get started!`;
         this.addOutput('sukrit', 'output');
     }
     
-    showDate() {
+    /*showDate() {
         this.addOutput(new Date().toString(), 'output');
-    }
+    }*/
     
     listCommands() {
         const commands = Object.keys(this.commands).join('  ');
         this.addOutput(commands, 'output');
     }
     
-    showPath() {
-        this.addOutput('/home/sukrit/portfolio', 'output');
+    showResume() {
+        const resumePath = 'resume.pdf'; // Update with the correct relative path
+        const link = document.createElement('a');
+        link.href = resumePath;
+        link.download = 'Sukrit_Deb_Resume.pdf'; // Desired filename on download
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        this.addOutput('Downloading resume...', 'success');
     }
     
-    catCommand(args) {
-        if (!args.length) {
-            this.addOutput('cat: missing file operand', 'error');
-            return;
-        }
-        
-        const file = args[0];
-        switch (file) {
-            case 'README.md':
-                this.addOutput('# Sukrit\'s Portfolio Terminal\n\nWelcome to my interactive terminal portfolio!\nType "help" to explore my background and projects.', 'output');
-                break;
-            case 'skills.txt':
-                this.showTools();
-                break;
-            default:
-                this.addOutput(`cat: ${file}: No such file or directory`, 'error');
-        }
-    }
     
-    echoCommand(args) {
-        this.addOutput(args.join(' '), 'output');
-    }
     
     navigateHistory(direction) {
         if (this.commandHistory.length === 0) return;
@@ -438,7 +420,7 @@ Type any command to get started!`;
         terminal.scrollTop = terminal.scrollHeight;
     }
     
-    setCurrentDate() {
+    /*setCurrentDate() {
         const now = new Date();
         const dateStr = now.toLocaleDateString('en-US', {
             weekday: 'short',
@@ -448,7 +430,7 @@ Type any command to get started!`;
             minute: '2-digit'
         });
         document.getElementById('current-date').textContent = dateStr;
-    }
+    }*/
     
     playSound() {
         // Simple beep sound for startup
