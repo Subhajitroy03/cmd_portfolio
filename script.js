@@ -41,28 +41,28 @@ class TerminalPortfolio {
             
             projects: [
                 {
-                    title: "AI Chatbot System",
-                    description: "Advanced conversational AI with NLP capabilities, context awareness, and multi-language support.",
-                    tech: "Python, TensorFlow, BERT, FastAPI",
-                    link: "https://github.com/sukrit/ai-chatbot"
+                    title: "Email spam classifier",
+                    description: "An email spam detection system with 85% accuracy using python.",
+                    tech: "Python, NumPy, Pandas, Sklearn",
+                    link: "https://github.com/SukritDeb/spamClassifier"
                 },
                 {
-                    title: "Computer Vision Platform",
-                    description: "Real-time image classification and object detection system with 99.2% accuracy.",
-                    tech: "PyTorch, OpenCV, YOLO, Docker",
-                    link: "https://github.com/sukrit/vision-platform"
+                    title: "Pain-O-Relief",
+                    description: "Exercise suggestor for specific pain relief and real time consultation with doctors.",
+                    tech: "Agora, Node.js, MongoDB, HTML, CSS, JavaScript",
+                    link: "https://github.com/SukritDeb/Pain-O-Relief"
                 },
                 {
-                    title: "Predictive Analytics Engine",
-                    description: "Big data processing platform with advanced analytics and interactive dashboards.",
-                    tech: "R, MongoDB, AWS, Spark, D3.js",
-                    link: "https://github.com/sukrit/analytics-engine"
+                    title: "My Terminal Portfolio",
+                    description: "My interactive terminal portfolio showcasing my skills and projects.",
+                    tech: "HTML, CSS, JavaScript, Node.js",
+                    link: "https://github.com/SukritDeb/cmd_portfolio"
                 },
                 {
-                    title: "Medical Image Analysis",
-                    description: "AI system for medical diagnosis assistance with 97% diagnostic accuracy.",
-                    tech: "TensorFlow, U-Net, Flask, HIPAA",
-                    link: "https://github.com/sukrit/medical-ai"
+                    title: "Nubfolio",
+                    description: "My canother clean and minimal portfolio website.",
+                    tech: "HTML, CSS, JavaScript, Node.js",
+                    link: "https://github.com/SukritDeb/nubfolio"
                 }
             ],
             
