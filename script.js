@@ -346,7 +346,7 @@ Type any command to get started!`;
     }
     
     showResume() {
-        const resumePath = 'resume.pdf'; // Update with the correct relative path
+        const resumePath = '/resume.pdf'; // Update with the correct relative path
         const link = document.createElement('a');
         link.href = resumePath;
         link.download = 'Sukrit_Deb_Resume.pdf'; // Desired filename on download
