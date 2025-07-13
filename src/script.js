@@ -1,3 +1,4 @@
+console.log("✅ Script loaded!");
 class TerminalPortfolio {
     constructor() {
         this.commandHistory = [];
@@ -93,7 +94,7 @@ class TerminalPortfolio {
     init() {
         this.setupEventListeners();
         this.updateCursor();
-        this.setCurrentDate();
+     
         this.focusInput();
         
         // Play startup sound
