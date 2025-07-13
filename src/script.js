@@ -71,7 +71,7 @@ class TerminalPortfolio {
                 email: "debsukrit00@gmail.com",
                 github: "https://github.com/SukritDeb",
                 linkedin: "https://www.linkedin.com/in/sukritdeb/",
-                website: "https://sukrit.dev"
+                website: "https://sukrit-beta.vercel.app"
             }
         };
         
