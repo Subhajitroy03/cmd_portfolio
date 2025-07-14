@@ -61,7 +61,7 @@ class TerminalPortfolio {
                 },
                 {
                     title: "Nubfolio",
-                    description: "My canother clean and minimal portfolio website.",
+                    description: "My another clean and minimal portfolio website.",
                     tech: "HTML, CSS, JavaScript, Node.js",
                     link: "https://github.com/SukritDeb/nubfolio"
                 }
