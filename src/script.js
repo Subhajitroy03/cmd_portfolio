@@ -21,9 +21,21 @@ class TerminalPortfolio {
             
             experience: [
                 {
+                    title: "Convenor",
+                    community: "SC CSE AOT",
+                    duration: "2025 - Present",
+                    description: "Leading the Student Chapter of CSE at AOT, guiding the core team, managing events, and driving initiatives that foster innovation, collaboration, and growth within the community."
+                },
+                {
+                    title: "ML Lead",
+                    community: "GDG on campus AOT",
+                    duration: "2025 - Present",
+                    description: "Leading the Machine Learning team at GDG on Campus AOT, driving AI-focused projects, mentoring peers in ML technologies, and fostering a culture of technical excellence and innovation."
+                },
+                {
                     title: "Tech Associate",
                     community: "SC CSE AOT",
-                    duration: "2023 - Present",
+                    duration: "2024 - 2025",
                     description: "Leading AI initiatives and navigating the team through complex technical challenges. Mentoring peers in AI/ML technologies and fostering a culture of innovation."
                 },
                 {
@@ -35,12 +47,19 @@ class TerminalPortfolio {
                 {
                     title: "Designer",
                     community: "GDG on campus AOT",
-                    duration: "2024 - Present",
+                    duration: "2024 - 2025",
                     description: "Designed posts and website for the community. Collaborating with developers to create visually appealing and user-friendly interfaces."
                 }
             ],
             
             projects: [
+                {
+                    title: "Algerian Forest Fire Predictor",
+                    description: "A machine learning project predicting Algeria’s Forest Fire Weather Index (FWI) using regression models, featuring data cleaning, EDA, model training, and a Flask-based real-time prediction web app.",
+                    tech: "Python, Flask, NumPy, Pandas, Scikit-learn, Jupyter Notebook, AWS Elastic Beanstalk",
+                    link: "https://github.com/SukritDeb/Algerian-Forest-Fire-Predictor"
+                },
+                
                 {
                     title: "Email spam classifier",
                     description: "An email spam detection system with 85% accuracy using python.",
